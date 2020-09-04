@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="AppScene" extends="Scene" >
+    <children>
+        <Rectangle id="header">
+            <Poster id="logo" />
+            <Label id="userName" />
+            <SimpleButton id="authButton" />
+            <Label id="authButtonLabel" />
+        </Rectangle>
+        <Poster id="hero" />
+        <Rectangle id="banner">
+            <SimpleButton id="joinNowButton" />
+            <Label id="joinNowButtonLabel" />
+        </Rectangle>
+    </children>
+    <script type="text/brightscript" uri="./AppScene_before.brs"/>
+<!--    <script type="text/brightscript" uri="./AppScene_after.brs"/>-->
+    <script type="text/brightscript" uri="./AppSceneUIConfig.brs"/>
+</component>

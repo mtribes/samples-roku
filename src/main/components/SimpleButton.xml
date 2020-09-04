@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="SimpleButton" extends="Poster">
+	<interface>
+		<field id="focused" type="assocarray"/>
+		<field id="unfocused" type="assocarray"/>
+		<field id="disabled" type="assocarray"/>
+	</interface>
+</component>
