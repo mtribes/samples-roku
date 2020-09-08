@@ -1,7 +1,7 @@
-title=QaClientRoku
+title=Sample
 major_version=1
 minor_version=0
-build_version=9
+build_version=0
 
 # Resolution
-ui_resolutions=fhd
+ui_resolutions=fhd,hd,sd

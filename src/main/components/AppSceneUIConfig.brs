@@ -1,8 +1,4 @@
 function setupInitialUI()
-  buttonFocusedHeight = 38
-  buttonUnfocusedHeight = 32
-  headerHeight = 56
-  bannerHeight = 80
 
   scene = m.global.getScene()
   UIResolution = scene.currentDesignResolution
@@ -18,57 +14,67 @@ function setupInitialUI()
     divider = 2.25
   end if
 
+  buttonFocusedHeight = int(38/divider)
+  buttonUnfocusedHeight = int(32/divider)
+  headerHeight = int(56/divider)
+  bannerHeight = int(80/divider)
+  heroHeight = int(500/divider)
+  authButtonFocusedWidth = int(92/divider)
+  authButtonUnfocusedWidth = int(86/divider)
+  joinButtonFocusedWidth = int(92/divider)
+  joinButtonUnfocusedWidth = int(86/divider)
+
   m.authButton.setFields({
     focused: {
       uri: "pkg:/images/authButtonFocused.png"
-      translation: [screenSize.w - 16 - 89, (headerHeight - buttonFocusedHeight)/2]
+      translation: [screenSize.w - int(16/divider) + 3 - authButtonFocusedWidth, (headerHeight - buttonFocusedHeight)/2]
       height: buttonFocusedHeight
-      width: 92
+      width: joinButtonFocusedWidth
       loadHeight: buttonFocusedHeight
-      loadWidth: 92
+      loadWidth: joinButtonFocusedWidth
       opacity: 1
     }
     unfocused: {
       uri: "pkg:/images/authButtonUnfocused.png"
-      translation: [screenSize.w - 16 - 86, (headerHeight - buttonUnfocusedHeight)/2]
+      translation: [screenSize.w - int(16/divider) - joinButtonUnfocusedWidth, (headerHeight - buttonUnfocusedHeight)/2]
       height: buttonUnfocusedHeight
-      width: 86
+      width: joinButtonUnfocusedWidth
       loadHeight: buttonUnfocusedHeight
-      loadWidth: 86
+      loadWidth: joinButtonUnfocusedWidth
       opacity: 1
     }
     disabled: {
       uri: "pkg:/images/authButtonUnfocused.png"
-      translation: [screenSize.w - 16 - 86, (headerHeight - buttonUnfocusedHeight)/2]
+      translation: [screenSize.w - int(16/divider) - joinButtonUnfocusedWidth, (headerHeight - buttonUnfocusedHeight)/2]
       height: buttonUnfocusedHeight
-      width: 86
+      width: joinButtonUnfocusedWidth
       loadHeight: buttonUnfocusedHeight
-      loadWidth: 86
+      loadWidth: joinButtonUnfocusedWidth
       opacity: 0.5
     }
     loadDisplayMode: "scaleToFit"
   })
   font = createObject("roSGNode", "Font")
   font.uri = "pkg:/fonts/OpenSansRegular.ttf"
-  font.size = 14
+  font.size = int(14/divider)
   m.authButtonLabel.setFields({
     text: ""
     height: buttonUnfocusedHeight
-    width: 86
+    width: authButtonUnfocusedWidth
     font: font
     horizAlign: "center"
     vertAlign: "center"
     color: "0xFFFFFFFF"
-    translation: [screenSize.w - 16 - 86, (headerHeight - buttonUnfocusedHeight)/2]
+    translation: [screenSize.w - int(16/divider) - authButtonUnfocusedWidth, (headerHeight - buttonUnfocusedHeight)/2]
   })
   font = createObject("roSGNode", "Font")
   font.uri = "pkg:/fonts/OpenSansBold.ttf"
-  font.size = 24
+  font.size = int(24/divider)
   m.userName.setFields({
     text: ""
     height: buttonUnfocusedHeight
     font: font
-    translation: [64, 12]
+    translation: [int(64/divider), int(12/divider)]
     wrap: false
   })
   m.logo.setFields({
@@ -78,7 +84,7 @@ function setupInitialUI()
     loadDisplayMode: "scaleToFit"
     height: buttonUnfocusedHeight
     width: buttonUnfocusedHeight
-    translation: [16, 12]
+    translation: [int(16/divider), int(12/divider)]
   })
   m.header.setFields({
     height: headerHeight
@@ -89,8 +95,8 @@ function setupInitialUI()
   m.hero.setFields({
     width: screenSize.w
     loadWidth: screenSize.w
-    height: 500
-    loadHeight: 500
+    height: heroHeight
+    loadHeight: heroHeight
     loadDisplayMode: "scaleToZoom"
     translation: [0, m.header.height]
   })
@@ -100,47 +106,48 @@ function setupInitialUI()
     height: bannerHeight
     translation: [0, m.hero.height + m.header.height + 16]
   })
+
   m.joinNowButton.setFields({
     focused: {
       uri: "pkg:/images/joinNowButtonFocused.png"
-      translation: [(screenSize.w - 94)/2, (bannerHeight - buttonFocusedHeight)/2]
+      translation: [(screenSize.w - joinButtonFocusedWidth)/2, (bannerHeight - buttonFocusedHeight)/2]
       height: buttonFocusedHeight
-      width: 94
+      width: joinButtonFocusedWidth
       loadHeight: buttonFocusedHeight
-      loadWidth: 94
+      loadWidth: joinButtonFocusedWidth
       opacity: 1
     }
     unfocused: {
       uri: "pkg:/images/joinNowButtonUnfocused.png"
-      translation: [(screenSize.w - 88)/2, (bannerHeight - buttonUnfocusedHeight)/2]
+      translation: [(screenSize.w - joinButtonUnfocusedWidth)/2, (bannerHeight - buttonUnfocusedHeight)/2]
       height: buttonUnfocusedHeight
-      width: 88
+      width: joinButtonUnfocusedWidth
       loadHeight: buttonUnfocusedHeight
-      loadWidth: 88
+      loadWidth: joinButtonUnfocusedWidth
       opacity: 1
     }
     disabled: {
       uri: "pkg:/images/joinNowButtonUnfocused.png"
-      translation: [(screenSize.w - 88)/2, (bannerHeight - buttonUnfocusedHeight)/2]
+      translation: [(screenSize.w - joinButtonUnfocusedWidth)/2, (bannerHeight - buttonUnfocusedHeight)/2]
       height: buttonUnfocusedHeight
-      width: 88
+      width: joinButtonUnfocusedWidth
       loadHeight: buttonUnfocusedHeight
-      loadWidth: 88
+      loadWidth: joinButtonUnfocusedWidth
       opacity: 0.5
     }
     loadDisplayMode: "scaleToFit"
   })
   font = createObject("roSGNode", "Font")
   font.uri = "pkg:/fonts/OpenSansRegular.ttf"
-  font.size = 14
+  font.size = int(14/divider)
   m.joinNowButtonLabel.setFields({
     text: ""
     height: buttonUnfocusedHeight
-    width: 88
+    width: joinButtonUnfocusedWidth
     font: font
     horizAlign: "center"
     vertAlign: "center"
     color: "0xFFFFFFFF"
-    translation: [(screenSize.w - 88)/2, (bannerHeight - buttonUnfocusedHeight)/2 + 2]
+    translation: [(screenSize.w - joinButtonUnfocusedWidth)/2, (bannerHeight - buttonUnfocusedHeight)/2 + int(2/divider)]
   })
 end function
