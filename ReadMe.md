@@ -1,13 +1,59 @@
-'TODO
-
-
-
 # Roku SDK: QA Sample App
+## CLI installation
+
+This is the first step. We've purpose-built a command-line-interface (CLI) to automate most of the process,
+and help integrate your mtribes Space quickly and accurately. 
+
+Install via [Homebrew](https://brew.sh/)
+```bash
+brew install mtribes/tap/mtribes
+```
+Install via [Scoop](https://scoop.sh/)
+
+```bash
+scoop bucket add mtribes https://github.com/mtribes/cli.git
+scoop install mtribes
+```
+
+## CLI upgrade
+
+Upgrade the CLI at anytime via [Homebrew](https://brew.sh/)
+
+```bash
+brew upgrade mtribes
+```
+
+Upgrade the CLI at anytime via [Scoop](https://scoop.sh/)
+
+```bash
+scoop update mtribes
+```
+## Space setup
+
+With the CLI installed, you can now set up your Space integration by running the
+following command in the root folder of your project.
+
+```bash
+mtribes setup
+```
+
+The first time you run `setup`, you'll be prompted to enter your secret API key
+to authenticate with mtribes. Your secret key is located on your organization's
+[settings page](https://mtribes.com/developer/settings). **You'll need to be an
+administrator to access this page**.
+
+Once authenticated, follow the remaining prompts to configure your connection.
+
+1. Select the mtribes Space to integrate with.
+2. Choose a target language if the default is incorrect.
+3. Type destination folder - "src/main/components/sample"
+
+The CLI will now generate Space specific integration code for you to use.
 
 ## Prepare Roku device
 
-First steep for launch any custom app on Roku device is enable developer mode.
-It will allow you to access yor Roku device from PC. Please read
+Enable developer mode on your Roku device. It will allow you to access yor Roku 
+device from PC. Please read
 [developer setup guide](https://blog.roku.com/developer/developer-setup-guide)
 
 ## Prepare environment
@@ -48,9 +94,14 @@ For run use CMD Ukor install command (where last parameter is your device from
   ukor install main your_device
 ```
 
+As an alternative you could use this command to run app
+```
+  ukor install main <your_roku_device_ip_adress> --auth=rokudev:1234
+```
+
 ## Run app with package.zip
 
 If you have application package as a zip file, you can simply upload it to
-the target Roku device via web interface http://your_device_ip_adress. 
+the target Roku device via web interface http://your_roku_device_ip_adress. 
 For it please see **Accessing the Development Application Installer** from
 [developer setup guide](https://blog.roku.com/developer/developer-setup-guide)
