@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Fully specific for Roku component. Responsible for following about connection  and screen saver statuses-->
+<component name="MTDeviceStatusHandler" extends="Task">
+	<interface>
+		<field id="isOnline" type="boolean" alwaysNotify="true"/>
+		<field id="isScreenSaverDisabled" type="boolean" alwaysNotify="true"/>
+
+		<function name="constructor"/>
+	</interface>
+
+	<script type="text/brightscript" uri="./DeviceStatusHandler.brs"/>
+	<script type="text/brightscript" uri="../../utils/CompareUtil.brs"/>
+	<script type="text/brightscript" uri="../Logger/LoggerLogic.brs"/>
+</component>

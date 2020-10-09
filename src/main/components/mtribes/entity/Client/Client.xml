@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MTClient" extends="MTBaseNode">
+	<interface>
+		<field id="session" type="node"/>
+		<field id="sessionLock" type="boolean" alwaysNotify="true"/>
+		<field id="waitForMsec" type="integer" alwaysNotify="true"/>
+		<field id="serviceUrl" type="string" alwaysNotify="true"/>
+		<field id="userTracking" type="boolean" alwaysNotify="true"/>
+
+		<!--	Allows to control logLevel of logger	-->
+		<field id="logLevel" type="integer" value="-1" alwaysNotify="true"/>
+	</interface>
+
+	<script type="text/brightscript" uri="./Client.brs"/>
+    <script type="text/brightscript" uri="../../utils/NodeUtil.brs"/>
+	<script type="text/brightscript" uri="../../utils/CompareUtil.brs"/>
+</component>
