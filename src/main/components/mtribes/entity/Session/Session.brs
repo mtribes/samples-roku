@@ -3,8 +3,8 @@ function constructor(arguments as Object)
 
     m.SERVED_PERIOD_THROTTLE_MSEC = 1000
     m.STREAM_POLL_RATE_MSEC = 20 * 60 * 1000
-    m.KEEP_ALIVE_RATE_SEC  = 40
-    m.KEEP_ALIVE_MAX_TIME_SEC = 120
+    m.KEEP_ALIVE_RATE_SEC  = 13 * 60
+    m.KEEP_ALIVE_MAX_TIME_SEC = 150 * 60
     m.KEEP_ALIVE_EVENT_TYPE  = "sdk/ka"
 
     m.primer = arguments.primer

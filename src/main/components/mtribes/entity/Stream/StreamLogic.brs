@@ -16,7 +16,6 @@ function MTStreamFactory(config as Object, messagePort as Object, callbacks) as 
     ws: WebSocketClient()
 
     start: function() as Void
-      m.config.serviceUrl = m.config.serviceUrl.replace("client", "stream")
       resource = m.config.serviceUrl + "/ws/tk?k=" + m.config.apiKey
       m.config.log.info("Establishing stream pre-handshake: " + resource)
       m.handshakeTransfer = createObject("roUrlTransfer")
