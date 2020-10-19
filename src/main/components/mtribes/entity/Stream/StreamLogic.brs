@@ -23,6 +23,7 @@ function MTStreamFactory(config as Object, messagePort as Object, callbacks) as 
       m.handshakeTransfer.setCertificatesFile("common:/certs/ca-bundle.crt")
       m.handshakeTransfer.initClientCertificates()
       m.handshakeTransfer.addHeader("Content-Type", "application/json")
+      m.handshakeTransfer.addHeader("User-Agent", "mtclient-roku")
       m.handshakeTransfer.setURL(resource)
       m.handshakeTransfer.asyncGetToString()
     end function
@@ -32,6 +33,7 @@ function MTStreamFactory(config as Object, messagePort as Object, callbacks) as 
         if message.getSourceIdentity() = m.handshakeTransfer.getIdentity() then
           handled = m._handleHandshake(message)
           if handled then
+            m.ws.set_headers(["User-Agent", "mtclient-roku"])
             m.ws.set_message_port(m.messagePort)
             m.config.log.info("Establishing ws connection: " + m.wsURL)
             m.ws.secret = m.secret
