@@ -71,3 +71,5 @@ App consist of following UI elements.
 2. `Hero` - Displays different image depending on whether signed in or out
 3. `Banner` - Displays Visitor label when signed out, and Member label when signed in
 Hero and Banner are moved into an mtribes Section to highlight the dynamic capabilities these can provide.
+
+### mtribes Space with sample app
