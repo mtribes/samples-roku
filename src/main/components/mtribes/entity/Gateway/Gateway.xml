@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MTGateway" extends="Task">
+	<interface>
+		<!--	this field should be updated each time when you applying changes to config	-->
+		<field id="config" type="assocarray" alwaysNotify = "true"/>
+		<!--	this field should be set if you want interrupt some request. Value if the field
+			should correspond to the reqId (see Primer code)-->
+		<field id="cancelRequestWithId" type="string" alwaysNotify = "true"/>
+		<!--	this field should be updated each time when logLevel is changed	-->
+		<field id="logLevel" type="integer" value="-1" alwaysNotify="true"/>
+
+		<!--	set this field to send state update request	-->
+		<field id="loadStates" type="assocarray" alwaysNotify = "true"/>
+		<!--	set this field to send analytic events to server	-->
+		<field id="sendEvents" type="assocarray" alwaysNotify = "true"/>
+
+		<function name="constructor"/>
+	</interface>
+
+	<script type="text/brightscript" uri="./Gateway.brs"/>
+	<script type="text/brightscript" uri="./GatewayLogic.brs"/>
+	<script type="text/brightscript" uri="./RequestFactory.brs"/>
+	<script type="text/brightscript" uri="../../utils/CompareUtil.brs"/>
+	<script type="text/brightscript" uri="../Promise/PromiseConstants.brs"/>
+	<script type="text/brightscript" uri="../Logger/LoggerLogic.brs"/>
+</component>

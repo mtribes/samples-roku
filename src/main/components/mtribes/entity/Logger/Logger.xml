@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MTLogger" extends="MTChangeableNode">
+	<interface>
+		<function name="info"/>
+		<function name="error"/>
+		<function name="warn"/>
+	</interface>
+
+	<script type="text/brightscript" uri="./Logger.brs"/>
+	<script type="text/brightscript" uri="./LoggerLogic.brs"/>
+	<script type="text/brightscript" uri="../../utils/CompareUtil.brs"/>
+</component>

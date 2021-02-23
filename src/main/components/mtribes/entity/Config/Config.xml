@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MTConfig" extends="MTChangeableNode">
+	<interface>
+		<field id="apiKey" type="string"/>
+		<field id="serviceUrl" type="string"/>
+		<field id="waitForMsec" type="integer"/>
+		<field id="sessionLock" type="boolean"/>
+		<field id="userTracking" type="boolean"/>
+		<field id="pollRateSec" type="integer"/>
+		<field id="autoUpdate" type="boolean"/>
+		<field id="log" type="node" />
+		<field id="version" type="string" value=""/>
+
+		<!--	Allows to control logLevel of logger	-->
+		<field id="logLevel" type="integer" value="-1" alwaysNotify="true"/>
+	</interface>
+
+	<script type="text/brightscript" uri="./Config.brs"/>
+	<script type="text/brightscript" uri="../../Version.brs"/>
+	<script type="text/brightscript" uri="../../utils/NodeUtil.brs"/>
+	<script type="text/brightscript" uri="../../utils/CompareUtil.brs"/>
+</component>

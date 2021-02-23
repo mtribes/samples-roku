@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MTSafeStorage" extends="MTBaseNode">
+	<interface>
+		<field id="secure" type="boolean" value="true"/>
+		<field id="storageType" type="string"/>
+
+		<function name="getItem"/>
+		<function name="removeItem"/>
+		<function name="setItem"/>
+		<function name="clear"/>
+	</interface>
+
+	<script type="text/brightscript" uri="./Storage.brs"/>
+	<script type="text/brightscript" uri="./MTRegistryFactory.brs"/>
+	<script type="text/brightscript" uri="../../utils/CompareUtil.brs"/>
+</component>

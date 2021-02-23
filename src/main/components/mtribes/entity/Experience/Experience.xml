@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MTExperience" extends="MTChangeableNode">
+	<interface>
+		<field id="defaultData" type="assocarray"/>
+		<field id="kind" type="string" value=""/>
+		<function name="enabled"/>
+		<function name="track"/>
+		<function name="data"/>
+		<function name="scenarioId"/>
+
+	</interface>
+
+	<script type="text/brightscript" uri="./Experience.brs"/>
+	<script type="text/brightscript" uri="../../utils/CompareUtil.brs"/>
+</component>
