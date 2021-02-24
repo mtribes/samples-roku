@@ -3,12 +3,6 @@ The sample project below show how mtribes can be integrated with various Roku ap
 
 ## Running
 
-### Prepare Roku device
-
-Enable developer mode on your Roku device. It will allow you to access yor Roku 
-device from PC. Please read
-[developer setup guide](https://blog.roku.com/developer/developer-setup-guide)
-
 ### Prepare environment
 
 For run app on Roku device, please install Ukor and Wist with CMD (if you
@@ -51,13 +45,6 @@ As an alternative you could use this command to run app
 ```
   ukor install main <your_roku_device_ip_adress> --auth=rokudev:1234
 ```
-
-### Run app with package.zip
-
-If you have application package as a zip file, you can simply upload it to
-the target Roku device via web interface http://your_roku_device_ip_adress. 
-For it please see **Accessing the Development Application Installer** from
-[developer setup guide](https://blog.roku.com/developer/developer-setup-guide)
 
 ## Structure
 App code lies in "src/main/components". It contains 4 important files:
