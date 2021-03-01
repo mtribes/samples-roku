@@ -1,7 +1,7 @@
-# mtribes samples - Roku
+# mtribes sample - Roku
 
-The sample projects below show how `mtribes` can be integrated with various Roku applications. 
-These samples demonstrate how to easily add targeting control into an existing app.
+The sample project below shows how `mtribes` can be integrated with various Roku applications. 
+This sample demonstrates how to add targeting control into an existing app.
 
 ## Running
 
@@ -43,7 +43,7 @@ To run, use the CMD Ukor install command (where the last parameter is your devic
   ukor install main your_device
 ```
 
-As an alternative, you can use this command to run the app
+As an alternative, you can use this command to run the app:
 ```
   ukor install main <your_roku_device_ip_adress> --auth=rokudev:1234
 ```
