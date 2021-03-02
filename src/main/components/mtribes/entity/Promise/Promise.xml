@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--    Promise-like node. It called "Promise" only to highlight its "once-time" nature - result field should be
+    updated only once! There is no logic that handle it (adding of such logic will lead to performance looses),
+    so any deviation from this "once-time" agreement is a responsibility of developer that doing that   -->
+<component name="MTPromise" extends="Timer">
+    <interface>
+        <field id="status" type="string" value="" alwaysnotify="true"/>
+        <field id="result" type="assocarray" alwaysnotify="true"/>
+        <function name="resolve"/>
+    </interface>
+    <script type="text/brightscript" uri="./Promise.brs"/>
+</component>

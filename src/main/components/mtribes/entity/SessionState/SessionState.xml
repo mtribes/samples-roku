@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MTSessionState" extends="MTChangeableNode">
+	<interface>
+		<field id="anonymous" type="boolean" value="true"/>
+		<field id="ready" type="boolean"/>
+		<field id="status" type="string"/>
+		<field id="anonId" type="string"/>
+		<field id="userId" type="string"/>
+		<field id="fields" type="assocarray"/>
+		<field id="sig" type="string"/>
+
+		<function name="anonymize"/>
+		<function name="identify"/>
+		<function name="loadStart"/>
+		<function name="waitElapsed"/>
+		<function name="loadComplete"/>
+		<function name="loadFailed"/>
+		<function name="lastStatesVersion"/>
+		<function name="expState"/>
+		<function name="expDefaultState"/>
+	</interface>
+
+	<script type="text/brightscript" uri="./SessionState.brs"/>
+	<script type="text/brightscript" uri="./Differ.brs"/>
+	<script type="text/brightscript" uri="../Session/SessionConstants.brs"/>
+	<script type="text/brightscript" uri="../../utils/CompareUtil.brs"/>
+	<script type="text/brightscript" uri="../../utils/DateTimeUtil.brs"/>
+	<script type="text/brightscript" uri="../../utils/NodeUtil.brs"/>
+	<script type="text/brightscript" uri="../Promise/PromiseConstants.brs"/>
+</component>

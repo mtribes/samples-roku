@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MTBroker" extends="MTBaseNode">
+	<interface>
+		<field id="defaultSession" type="node"/>
+
+		<function name="register"/>
+		<function name="state"/>
+		<function name="defaultState"/>
+		<function name="template"/>
+		<function name="track"/>
+		<function name="children"/>
+		<function name="isNotEmptySpace"/>
+
+		<!--	updateNodeStateById - roku replacement for _ScopeSignaller logic - responsible for updating
+			states of Experiences after receiving and processing appropriate response -->
+		<function name="updateNodeStateById"/>
+		<!--	responsible for clearing section data if Remove event is received during Gateway execution	-->
+		<function name="removeFromSaved"/>
+	</interface>
+
+	<script type="text/brightscript" uri="./Broker.brs"/>
+    <script type="text/brightscript" uri="../../utils/NodeUtil.brs"/>
+	<script type="text/brightscript" uri="../../utils/CompareUtil.brs"/>
+</component>

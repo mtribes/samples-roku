@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MTSessionPrimer" extends="MTBaseNode">
+	<interface>
+		<function name="prime"/>
+	</interface>
+
+	<script type="text/brightscript" uri="./Primer.brs"/>
+	<script type="text/brightscript" uri="../../utils/CompareUtil.brs"/>
+	<script type="text/brightscript" uri="../../const/SDKConstants.brs"/>
+</component>

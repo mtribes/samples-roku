@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MTCollection" extends="MTBaseNode">
+	<interface>
+		<function name="resetToDefault"/>
+	</interface>
+	<script type="text/brightscript" uri="./Collection.brs"/>
+	<script type="text/brightscript" uri="../../utils/NodeUtil.brs"/>
+</component>

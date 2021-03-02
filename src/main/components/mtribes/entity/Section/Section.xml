@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MTSection" extends="MTChangeableNode">
+	<interface>
+		<field id="supported" type="assocarray"/>
+		<field id="children" type="nodearray"/>
+
+		<function name="resetToDefault"/>
+	</interface>
+
+	<script type="text/brightscript" uri="./Section.brs"/>
+</component>

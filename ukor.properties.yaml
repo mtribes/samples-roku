@@ -1,0 +1,26 @@
+name: 'QA Client Roku'
+version: '0.0.1'
+buildDir: 'build'
+sourceDir: 'src'
+mainFlavor: 'main'
+flavors: {
+  main: {
+    src: ['main']
+  }
+}
+rokus: {
+  roku: {
+    serial: 'YH00C4474609',
+    auth: {
+      user: 'rokudev',
+      pass: '1234'
+    }
+  },
+  roku2: {
+    serial: 'YH00CL471382',
+    auth: {
+      user: 'rokudev',
+      pass: '1234'
+    }
+  }
+}

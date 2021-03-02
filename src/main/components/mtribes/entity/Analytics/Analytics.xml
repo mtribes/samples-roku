@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MTAnalytics" extends="MTBaseNode">
+	<interface>
+		<function name="track"/>
+		<function name="enabled"/>
+		<function name="removeEvents"/>
+		<field id="eventTracked" type="string" alwaysNotify="true"/>
+	</interface>
+
+	<script type="text/brightscript" uri="./Analytics.brs"/>
+	<script type="text/brightscript" uri="../../utils/CompareUtil.brs"/>
+	<script type="text/brightscript" uri="../../const/SDKConstants.brs"/>
+</component>

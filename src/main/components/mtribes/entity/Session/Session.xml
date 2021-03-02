@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="MTSession" extends="MTChangeableNode">
+	<interface>
+		<field id="ready" type="boolean" value="false"/>
+		<field id="status" type="string"/>
+		<field id="anonymous" type="boolean" value="false"/>
+		<function name="start"/>
+		<function name="update"/>
+		<function name="track"/>
+		<function name="experienceState"/>
+		<function name="defaultExperienceState"/>
+	</interface>
+
+	<script type="text/brightscript" uri="./Session.brs"/>
+	<script type="text/brightscript" uri="./SessionConstants.brs"/>
+    <script type="text/brightscript" uri="../../utils/NodeUtil.brs"/>
+	<script type="text/brightscript" uri="../../utils/CompareUtil.brs"/>
+	<script type="text/brightscript" uri="../../utils/DateTimeUtil.brs"/>
+</component>
